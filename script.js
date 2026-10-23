@@ -6,6 +6,7 @@ const revealElements = [...document.querySelectorAll('.reveal')];
 const backToTop = document.querySelector('#backToTop');
 const copyEmailButton = document.querySelector('.copy-email');
 const toast = document.querySelector('.toast');
+const currentYear = document.querySelector('#current-year');
 
 let toastTimer;
 
@@ -118,3 +119,7 @@ window.addEventListener('scroll', () => {
 
 updateActiveSection();
 updateBackToTop();
+
+if (currentYear) {
+  currentYear.textContent = String(new Date().getFullYear());
+}
